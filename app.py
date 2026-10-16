@@ -91,8 +91,9 @@ class SiteHandler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    server = HTTPServer(("127.0.0.1", 8080), SiteHandler)
-    print("Serving Little Data Garden at http://127.0.0.1:8080")
+    server = HTTPServer(("127.0.0.1", 8081), SiteHandler)
+    print("Serving Little Data Garden at http://127.0.0.1:8081")
+
     try:
         server.serve_forever()
     except KeyboardInterrupt:
