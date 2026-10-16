@@ -34,6 +34,7 @@ PAGE = r"""<!doctype html>
     .chart .dot { fill:white; stroke:var(--green); stroke-width:3 }
     .chart .gridline { stroke:#e9eee8; stroke-width:1 }
     .side-card { display:flex; flex-direction:column; justify-content:space-between; background:#e7eee5 }
+    .feature-card { min-height:140px; display:flex; align-items:center; background:#fff8e8; border-color:#eee4cc }
     .leaf { font-size:42px }
     .note { color:#52665a; font-size:14px }
     .refresh { margin-top:18px; padding:11px 16px; border:0; border-radius:10px; background:var(--green); color:white; font:600 14px system-ui; cursor:pointer }
@@ -59,6 +60,7 @@ PAGE = r"""<!doctype html>
       </svg>
     </article>
     <article class="card side-card"><div><div class="leaf">🌱</div><h2>A little reminder</h2><p class="note">Small things add up. Take a breath, stretch your legs, and let one good idea grow.</p></div><div class="eyebrow">Grown with Python</div></article>
+    <article class="card feature-card"><h2>Feature B</h2></article>
   </section>
   <form method="get"><button class="refresh" type="submit">↻ Grow a new snapshot</button></form>
   <footer>All numbers are randomly generated for fun.</footer>
