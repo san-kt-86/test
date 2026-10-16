@@ -48,6 +48,7 @@ PAGE = r"""<!doctype html>
     <article class="card"><div class="metric-label">Garden visitors</div><div class="metric">__VISITORS__ <span class="unit">today</span></div></article>
     <article class="card"><div class="metric-label">Happiness index</div><div class="metric">__HAPPY__<span class="unit"> / 100</span></div></article>
     <article class="card"><div class="metric-label">Ideas growing</div><div class="metric">__IDEAS__ <span class="unit">new sprouts</span></div></article>
+    <article class="card"><div class="metric-label">Feature A</div></article>
     <article class="card chart-card">
       <div class="chart-head"><div><h2>Daily sunshine</h2><p>Imaginary hours of sunshine this week</p></div><div class="eyebrow">This week</div></div>
       <svg class="chart" viewBox="0 0 600 205" role="img" aria-label="A line chart showing sunshine hours over seven days">
@@ -90,8 +91,8 @@ class SiteHandler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    server = HTTPServer(("127.0.0.1", 8000), SiteHandler)
-    print("Serving Little Data Garden at http://127.0.0.1:8000")
+    server = HTTPServer(("127.0.0.1", 8080), SiteHandler)
+    print("Serving Little Data Garden at http://127.0.0.1:8080")
     try:
         server.serve_forever()
     except KeyboardInterrupt:
